@@ -3,7 +3,6 @@ body {
 }
 
 .card-container {
-  display: none;
   width: 500px;
   margin: 5px auto;
   display: grid;
@@ -42,4 +41,52 @@ body {
 .card-front-img, .card-back-img {
   width: 100px;
   height: 147px;
+}
+
+.game-over-container {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('../img/bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.game-over {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 50vw;
+  height: 50vh;
+  background-color: #fff;
+  border-radius: 20px;
+}
+
+h2 {
+  margin-bottom: 80px;
+}
+
+.btn-game-over {
+  width: 200px;
+  height: 40px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  margin: 15px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  background-color: #9c27b0;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.btn-game-over:hover {
+  color: #9c27b0;
+  background-color: #fff;
+  font-size: 1.3rem;
 }

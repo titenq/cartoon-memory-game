@@ -2,6 +2,8 @@ document.oncontextmenu = () => false;
 const cardContainer = document.getElementById('cardContainer');
 const set = window.location.search.split('&')[0].split('=')[1];
 const folder = window.location.search.split('&')[1].split('=')[1]
+const gameOverContainer = document.getElementById('gameOverContainer');
+const spanRounds = document.getElementById('spanRounds');
 
 const generateCards = set => {
   switch (set) {
@@ -76,7 +78,9 @@ const game = () => {
           cardContainer.style.pointerEvents = 'all';
 
           if (score === 10) {
-            gameOver();
+            setTimeout(() => {
+              gameOver();
+            }, 1500);
           }
         } else {
           flips[index1].style.transform = 'rotateY(180deg)';
@@ -90,7 +94,9 @@ const game = () => {
 };
 
 const gameOver = () => {
-  console.log(`Parabéns! Você venceu com ${rounds} jogadas.`);
+  cardContainer.style.display = 'none';
+  gameOverContainer.style.display = 'flex';
+  spanRounds.innerText = rounds;
 };
 
 game();
