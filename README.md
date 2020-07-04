@@ -1,6 +1,7 @@
 ![](https://img.shields.io/github/stars/titenq/cartoon-memory-game.svg) ![](https://img.shields.io/github/forks/titenq/cartoon-memory-game.svg) ![](https://img.shields.io/github/issues/titenq/cartoon-memory-game.svg) 
 
 ### Jogo da Memória Cartoon
+Jogo da Memória com personagens de cartoon.
 
 ### Demo
 [https://titenq.github.io/cartoon-memory-game/](https://titenq.github.io/cartoon-memory-game/ "https://titenq.github.io/cartoon-memory-game/")
