@@ -4,13 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/global.css">
+    <link rel="stylesheet" href="./assets/css/index.css">
     <title>Jogo da Memória Cartoon</title>
   </head>
   <body>
-    <section class="card-container" id="cardContainer"></section>
+    <header class="header">
+      <h1>Jogo da Memória Cartoon</h1>
+      <h2>Escolha o set de cartas:</h2>
+    </header>
+    <main class="sets-container">
+      <figure class="sets" id="setCavernaDoDragao" data-set=".img-caverna-do-dragao">
+        <a href="./game.html?cards=cardsCavernaDoDragao&folder=caverna-do-dragao">
+          <img class="img img-caverna-do-dragao" src="./assets/img/caverna-do-dragao/mestre-dos-magos.jpg" alt="Mestre dos Magos">
+          <img class="img img-caverna-do-dragao" src="./assets/img/caverna-do-dragao/vingador.jpg" alt="Vingador">
+          <img class="img img-caverna-do-dragao" src="./assets/img/caverna-do-dragao/presto.jpg" alt="Presto">
+          <img class="img img-caverna-do-dragao" src="./assets/img/caverna-do-dragao/bobby.jpg" alt="Bobby">
+          <img class="img img-caverna-do-dragao" src="./assets/img/caverna-do-dragao/back-card.jpg" alt="Caverna do Dragão">
+        </a>
+        <figcaption class="caption">Caverna do Dragão</figcaption>
+      </figure>
 
-    <script src="./assets/js/cardsCavernaDoDragao.js"></script>
-    <script src="./assets/js/script.js"></script>
+      <figure class="sets" id="setHeMan" data-set=".img-he-man">
+        <a href="./game.html?cards=cardsHeMan&folder=he-man">
+          <img class="img img-he-man" src="./assets/img/he-man/gato-guerreiro.jpg" alt="Gato Guerreiro">
+          <img class="img img-he-man" src="./assets/img/he-man/gorpo.jpg" alt="Gorpo">
+          <img class="img img-he-man" src="./assets/img/he-man/esqueleto.jpg" alt="Esqueleto">
+          <img class="img img-he-man" src="./assets/img/he-man/he-man.jpg" alt="He-Man">
+          <img class="img img-he-man" src="./assets/img/he-man/back-card.jpg" alt="He-Man">
+        </a>
+        <figcaption class="caption">He-Man</figcaption>
+      </figure>
+
+      <figure class="sets" id="setThundercats" data-set=".img-thundercats">
+        <a href="./game.html?cards=cardsThundercats&folder=thundercats">
+          <img class="img img-thundercats" src="./assets/img/thundercats/snarf.jpg" alt="Snarf">
+          <img class="img img-thundercats" src="./assets/img/thundercats/cheetara.jpg" alt="Cheetara">
+          <img class="img img-thundercats" src="./assets/img/thundercats/mumm-ra.jpg" alt="Mumm-Ra">
+          <img class="img img-thundercats" src="./assets/img/thundercats/lion.jpg" alt="Lion">
+          <img class="img img-thundercats" src="./assets/img/thundercats/back-card.jpg" alt="thundercats">
+        </a>
+        <figcaption class="caption">Thundercats</figcaption>
+      </figure>
+    </main>
+
+    <script src="./assets/js/index.js"></script>
   </body>
 </html>

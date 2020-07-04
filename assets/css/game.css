@@ -1,20 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-html,
-body {
-  min-height: 100%;
-}
-
 body {
   background-color: #ccc;
 }
@@ -32,7 +15,6 @@ body {
   width: 100px;
   height: 147px;
   margin: 5px;
-  
   perspective: 1000px;
 }
 

@@ -1,0 +1,23 @@
+@import url(https://fonts.googleapis.com/css2?family=Slackey&display=swap);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+html,
+body {
+  font-family: 'Slackey', display;
+  min-height: 100%;
+}
+
+h1, h2 {
+  font-weight: lighter;
+}

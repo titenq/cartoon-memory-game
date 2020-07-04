@@ -1,19 +1,43 @@
+document.oncontextmenu = () => false;
 const cardContainer = document.getElementById('cardContainer');
+const set = window.location.search.split('&')[0].split('=')[1];
+const folder = window.location.search.split('&')[1].split('=')[1]
 
-cardsCavernaDoDragao.forEach((cardObject) => {
-  cardContainer.innerHTML += `
-  <div class="card">
-  <div class="card-flip">
-  <div class="card-front">
-  <img class="card-front-img" src=${cardObject.src} alt=${cardObject.name}>
-  </div>
-  <div class="card-back" data-id="${cardObject.id}">
-  <img class="card-back-img" src="./assets/img/caverna-do-dragao/back-card.jpg" alt="Caverna do Dragão">
-  </div>
-  </div>
-  </div>
-  `;
-});
+const generateCards = set => {
+  switch (set) {
+    case 'cardsCavernaDoDragao':
+      set = cardsCavernaDoDragao;
+      break;
+
+    case 'cardsHeMan':
+      set = cardsHeMan;
+      break;
+
+    case 'cardsThundercats':
+      set = cardsThundercats;
+      break;
+  
+    default:
+      break;
+  }
+
+  set.forEach(cardObject => {
+    cardContainer.innerHTML += `
+    <div class="card">
+      <div class="card-flip">
+        <div class="card-front">
+          <img class="card-front-img" src=${cardObject.src} alt=${cardObject.name} draggable="false">
+        </div>
+        <div class="card-back" data-id="${cardObject.id}">
+          <img class="card-back-img" src="./assets/img/${folder}/back-card.jpg" draggable="false">
+        </div>
+      </div>
+    </div>
+    `;
+  });
+};
+
+generateCards(set);
 
 const cards = document.querySelectorAll('.card-back');
 const flips = document.querySelectorAll('.card-flip');
@@ -25,6 +49,7 @@ let click2Data;
 let index1;
 let index2;
 let score = 0;
+let rounds = 0;
 
 const game = () => {
   cards.forEach((card, index) => card.addEventListener('click', () => {
@@ -37,17 +62,22 @@ const game = () => {
     } 
     
     if (click === 2) {
+      rounds++;
       cardContainer.style.pointerEvents = 'none';
       click2Data = card.dataset.id;
       index2 = index;
 
       setTimeout(() => {
         if (click1Data === click2Data) {
+          score++;
           cardsImg[index1].style.filter = 'grayscale(100%)';
           cardsImg[index2].style.filter = 'grayscale(100%)';
           click = 0;
-          score++;
           cardContainer.style.pointerEvents = 'all';
+
+          if (score === 10) {
+            gameOver();
+          }
         } else {
           flips[index1].style.transform = 'rotateY(180deg)';
           flips[index2].style.transform = 'rotateY(180deg)';
@@ -56,15 +86,11 @@ const game = () => {
         }
       }, 1000);
     }
-  
-    if (score === 10) {
-      gameOver();
-    }
   }));
 };
 
 const gameOver = () => {
-  console.log('Você venceu!');
+  console.log(`Parabéns! Você venceu com ${rounds} jogadas.`);
 };
 
 game();
