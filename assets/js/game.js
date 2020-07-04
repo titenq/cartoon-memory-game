@@ -4,6 +4,8 @@ const set = window.location.search.split('&')[0].split('=')[1];
 const folder = window.location.search.split('&')[1].split('=')[1]
 const gameOverContainer = document.getElementById('gameOverContainer');
 const spanRounds = document.getElementById('spanRounds');
+const btnJogar = document.getElementById('btnJogar');
+const btnEscolher = document.getElementById('btnEscolher');
 
 const generateCards = set => {
   switch (set) {
@@ -98,5 +100,8 @@ const gameOver = () => {
   gameOverContainer.style.display = 'flex';
   spanRounds.innerText = rounds;
 };
+
+btnJogar.addEventListener('click', () => window.history.go(0));
+btnEscolher.addEventListener('click', () => window.history.go(-3));
 
 game();
