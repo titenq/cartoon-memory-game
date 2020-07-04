@@ -23,7 +23,8 @@ body {
   transition: transform 0.5s;
 }
 
-.card-front, .card-back {
+.card-front,
+.card-back {
   position: absolute;
   backface-visibility: hidden;
 }
@@ -33,12 +34,14 @@ body {
   transform: rotateY(180deg);
 }
 
-.card-front .card-img, .card-back .card-img {
+.card-front .card-img,
+.card-back .card-img {
   border-radius: 12px;
   box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.3);
 }
 
-.card-front-img, .card-back-img {
+.card-front-img,
+.card-back-img {
   width: 100px;
   height: 147px;
 }
@@ -50,7 +53,7 @@ body {
   flex-direction: row;
   width: 100vw;
   height: 100vh;
-  background-image: url('../img/bg.jpg');
+  background-image: url("../img/bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -67,6 +70,7 @@ body {
 }
 
 h2 {
+  text-align: center;
   margin-bottom: 80px;
 }
 

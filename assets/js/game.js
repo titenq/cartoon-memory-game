@@ -1,7 +1,7 @@
 document.oncontextmenu = () => false;
 const cardContainer = document.getElementById('cardContainer');
 const set = window.location.search.split('&')[0].split('=')[1];
-const folder = window.location.search.split('&')[1].split('=')[1]
+const folder = window.location.search.split('&')[1].split('=')[1];
 const gameOverContainer = document.getElementById('gameOverContainer');
 const spanRounds = document.getElementById('spanRounds');
 const btnJogar = document.getElementById('btnJogar');
