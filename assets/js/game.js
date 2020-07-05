@@ -102,6 +102,6 @@ const gameOver = () => {
 };
 
 btnJogar.addEventListener('click', () => window.history.go(0));
-btnEscolher.addEventListener('click', () => window.history.go(-3));
+btnEscolher.addEventListener('click', () => window.history.go(-1));
 
 game();
