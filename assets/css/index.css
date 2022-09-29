@@ -37,3 +37,20 @@ body {
   text-align: center;
   top: 295px;
 }
+
+footer {
+  margin-top: 60px;
+}
+
+/* Responsividade */
+@media (max-width: 700px){
+  .sets-container {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 555px) {
+body {
+  background-size: auto;
+}
+}

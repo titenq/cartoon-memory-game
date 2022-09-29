@@ -1,18 +1,22 @@
 body {
+  height: 100vh;
   background-color: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .card-container {
-  width: 500px;
-  margin: 5px auto;
   display: grid;
+  justify-items: center;
+  justify-content: center;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 
 .card {
   position: relative;
-  width: 100px;
-  height: 147px;
+  width: 6.25rem;
+  height: 9.18rem;
   margin: 5px;
   perspective: 1000px;
 }
@@ -42,8 +46,8 @@ body {
 
 .card-front-img,
 .card-back-img {
-  width: 100px;
-  height: 147px;
+  width: 6.25rem;
+  height: 9.18rem;
 }
 
 .game-over-container {
@@ -93,4 +97,21 @@ h2 {
   color: #9c27b0;
   background-color: #fff;
   font-size: 1.3rem;
+}
+
+/* Responsividade */
+@media (max-width: 570px){
+  .card-container {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 448px){
+  .card-container {
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 0;
+  }
+  body {
+    height: 100%;
+  }
 }
