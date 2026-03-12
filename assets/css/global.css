@@ -1,4 +1,10 @@
-@import url(https://fonts.googleapis.com/css2?family=Slackey&display=swap);
+@font-face {
+  font-family: 'Slackey';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/Slackey-Regular.ttf') format('truetype');
+}
 
 * {
   margin: 0;
@@ -13,8 +19,12 @@
 }
 
 html,
-body {
-  font-family: 'Slackey', display;
+body,
+button,
+input,
+textarea,
+select {
+  font-family: 'Slackey', cursive;
   min-height: 100%;
 }
 
